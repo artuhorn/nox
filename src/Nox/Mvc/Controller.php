@@ -19,7 +19,7 @@ abstract class Controller extends Base
     {
         parent::__construct();
         
-        $this->view = new View(StringHelper::getBaseClassName(self::class));
+        $this->view = new View(StringHelper::getBaseClassName(static::class));
     }
 
     /**

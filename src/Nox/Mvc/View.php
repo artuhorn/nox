@@ -15,8 +15,6 @@ use Twig_Loader_Filesystem;
  */
 class View extends Base
 {
-    use THash;
-
     /** @var array */
     protected $data = [];
 
@@ -67,22 +65,22 @@ class View extends Base
 
     public function __get($name)
     {
-        return $this->hashGet($name);
+        return $this->data[$name];
     }
 
     public function __set($name, $value)
     {
-        $this->hashSet($name, $value);
+        $this->data[$name] = $value;
     }
 
     public function __isset($name)
     {
-        return $this->hashIsSet($name);
+        return isset($this->data[$name]);
     }
 
     public function __unset($name)
     {
-        $this->hashUnset($name);
+        unset($this->data[$name]);
     }
 
     /**
@@ -91,7 +89,7 @@ class View extends Base
      */
     public function render(string $action)
     {
-        foreach ($this->__data as $prop => $value) {
+        foreach ($this->data as $prop => $value) {
             $$prop = $value;
         }
         
@@ -121,7 +119,7 @@ class View extends Base
         $template = $this->findTemplate($action);
 
         ob_start();
-        echo $twig->render($template, $this->__data);
+        echo $twig->render($template, $this->data);
         $content = ob_get_contents();
         ob_end_clean();
 

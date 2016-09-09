@@ -19,13 +19,13 @@ trait THash
     public function hashSet($name, $value)
     {
         if (is_array($value)) {
-            $this->fromArray($value);
+            $this->{$name}->fromArray($value);
         } elseif ($name == '') {
             $this->data[] = $value;
         } elseif (is_scalar($value)) {
             $this->data[$name] = $value;
         } else {
-            $this->data[$name] = (new \ReflectionClass(self::class))->newInstanceWithoutConstructor();
+            $this->data[$name] = (new \ReflectionClass(Hash::class))->newInstanceWithoutConstructor();
         }
     }
 

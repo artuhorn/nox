@@ -3,6 +3,7 @@
 namespace Nox\Mvc;
 
 use Nox\Core\Base;
+use Nox\Core\TArrayAccess;
 use Nox\Database\Database;
 use Nox\Database\Query;
 use Nox\Database\QueryBuilder;
@@ -12,8 +13,10 @@ use Nox\Helpers\StringHelper;
  * Class Model
  * @package Nox\Mvc
  */
-abstract class Model extends Base
+abstract class Model extends Base implements \ArrayAccess
 {
+    use TArrayAccess;
+
     protected $data = [];
 
     /** @var bool */
