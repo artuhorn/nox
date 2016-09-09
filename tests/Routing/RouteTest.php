@@ -5,8 +5,6 @@ namespace Nox\Tests\Routing;
 use Nox\Routing\Route;
 use PHPUnit\Framework\TestCase;
 
-require __DIR__ . '/../../autoload.php';
-
 class RouteTest extends TestCase
 {
     public function testParseRoute()

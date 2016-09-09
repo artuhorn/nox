@@ -1,11 +1,9 @@
 <?php
 
-namespace Nox\Tests\Helpers;
+namespace Nox\Helpers;
 
 use Nox\Core\Hash;
 use PHPUnit\Framework\TestCase;
-
-require __DIR__ . '/../../autoload.php';
 
 class HashTest extends TestCase
 {

@@ -6,8 +6,6 @@ use Nox\Database\Query;
 use Nox\Database\QueryBuilder;
 use PHPUnit\Framework\TestCase;
 
-require __DIR__ . '/../../autoload.php';
-
 class QueryBuilderTest extends TestCase
 {
     public function testSelectQuery()

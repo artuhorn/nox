@@ -9,6 +9,9 @@
       "email": "artuhorn@gmail.com"
     }
   ],
+  "autoload": {
+    "psr-4": { "Nox\\": "src/Nox/" }
+  },
   "require": {
     "phpunit/phpunit": "^5.4",
     "twig/twig": "^1.24"
