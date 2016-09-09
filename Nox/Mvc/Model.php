@@ -1,6 +1,6 @@
 <?php
 
-namespace Nox\Orm;
+namespace Nox\Mvc;
 
 use Nox\Core\Base;
 use Nox\Database\Database;
@@ -10,7 +10,7 @@ use Nox\Helpers\StringHelper;
 
 /**
  * Class Model
- * @package Nox\Orm
+ * @package Nox\Mvc
  */
 abstract class Model extends Base
 {
