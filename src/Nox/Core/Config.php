@@ -2,7 +2,7 @@
 
 namespace Nox\Core;
 
-use Nox\Core\Hash;
+
 use Nox\Helpers\TSingleton;
 
 /**

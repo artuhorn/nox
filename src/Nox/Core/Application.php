@@ -6,6 +6,7 @@ use Nox\Exceptions\ApplicationException;
 use Nox\Exceptions\PageNotFoundException;
 use Nox\Helpers\TSingleton;
 use Nox\Helpers\StringHelper;
+use Nox\Http\Request;
 use Nox\Routing\Router;
 
 /**

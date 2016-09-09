@@ -2,7 +2,7 @@
 
 namespace Nox\Http;
 
-use Nox\Core\Base;
+
 use Nox\Core\Hash;
 use Nox\Helpers\TSingleton;
 

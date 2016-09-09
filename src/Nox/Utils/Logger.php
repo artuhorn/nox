@@ -2,6 +2,8 @@
 
 namespace Nox\Helpers;
 
+use Nox\Core\Config;
+
 class Log
 {
     protected $filename;
