@@ -22,7 +22,7 @@ class Application
     /** @var \Nox\Routing\Router */
     public $router;
 
-    /** @var \Nox\Core\Request */
+    /** @var \Nox\Http\Request */
     public $request;
     /** @var bool */
     public $debugMode = true;
